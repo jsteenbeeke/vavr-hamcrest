@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Maven') {
             steps {
-                sh 'mvn -B -U clean verify package'
+                sh 'mvn -ntp -B -U clean verify package'
             }
         }
         stage('Coverage') {
